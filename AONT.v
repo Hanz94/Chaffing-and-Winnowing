@@ -47,15 +47,57 @@ module latin_square#(
     ); 
 
     integer j = 0 ;
-    integer i = 1 ;
 
     always @ (posedge clk) begin
         latinsquare[0] = firstRow;
 
-        for (i=1; i<lslen; i=i+1) begin
-            for (j=0; j<lslen; j=j+1) begin
-                latinsquare[i][j] = ( 1 * latinsquare[j] ) % lslen;
-            end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[1][j] = ( 1 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[2][j] = ( 2 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[3][j] = ( 3 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[4][j] = ( 4 * latinsquare[1][j] ) % lslen;
+        end
+
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[5][j] = ( 5 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[6][j] = ( 6 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[7][j] = ( 7 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[8][j] = ( 8 * latinsquare[1][j] ) % lslen;
+        end
+
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[9][j] = ( 9 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[10][j] = ( 10 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[11][j] = ( 11 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[12][j] = ( 12 * latinsquare[1][j] ) % lslen;
+        end
+
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[13][j] = ( 13 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[14][j] = ( 14 * latinsquare[1][j] ) % lslen;
+        end
+        for (j=0; j<lslen; j=j+1) begin
+            latinsquare[15][j] = ( 15 * latinsquare[1][j] ) % lslen;
         end
     end
 
