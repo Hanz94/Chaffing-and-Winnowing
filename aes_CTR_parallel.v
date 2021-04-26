@@ -28,10 +28,10 @@ module aes_CTR_mode_alternative #(
 	wire encrypterClock;
 
 	assign encrypterClock = clk & !rst;
-	assign blockInput1 = {nonce1, counter1};
-    assign blockInput2 = {nonce2, counter2};
-    assign blockInput3 = {nonce3, counter3};
-    assign blockInput4 = {nonce4, counter4};
+	assign blockInput1 = {nonce1, counterIn1};
+    assign blockInput2 = {nonce2, counterIn2};
+    assign blockInput3 = {nonce3, counterIn3};
+    assign blockInput4 = {nonce4, counterIn4};
 
 	aes_128 encrypter_block1(
 		.clk(encrypterClock),
