@@ -18,14 +18,14 @@ module cw #(
   
 
   integer j = 0 ;
-  reg[cachesize-1:0][tagsize -1:0] macCacheReg;
+  // reg[cachesize-1:0][tagsize -1:0] macCacheReg;
 
   always @ (posedge clk) begin
-    macCacheReg = maccache;
+    // macCacheReg = maccache;
 
     for (j=0; j<cwbits; j++) begin
-        msgOut[j*2] =  { msgIn[j], macCacheReg[j], ctr};
-        msgOut[j*2+1] =  { ~msgIn[j], macCacheReg[cwbits -1 - j], ctr};
+        msgOut[j*2] =  { msgIn[j], maccache[j], ctr};
+        msgOut[j*2+1] =  { ~msgIn[j], maccache[cwbits -1 - j], ctr};
     end
   end
 
